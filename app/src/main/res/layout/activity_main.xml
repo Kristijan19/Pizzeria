@@ -1,0 +1,67 @@
+<!-- activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryYellow"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pizzaRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="625dp"
+        android:layout_below="@id/headerTextView"
+        android:layout_marginBottom="45dp"
+        android:padding="8dp" />
+
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/cartButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:text="@string/cart"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/historyButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:text="@string/history"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+</RelativeLayout>
