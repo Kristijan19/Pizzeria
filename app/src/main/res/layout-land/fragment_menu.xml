@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout-land/fragment_menu.xml - Landscape layout -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/white">
+
+    <!-- Leva strana: RecyclerView so Grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pizzaRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:padding="8dp"
+        android:clipToPadding="false"/>
+
+    <!-- Desna strana: Cart Button i info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/go_to_cart"
+            android:backgroundTint="@color/colorPrimaryYellow"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</LinearLayout>

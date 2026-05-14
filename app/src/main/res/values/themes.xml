@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Pizzeria" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryYellow</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryYellowDark</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="android:statusBarColor">@color/colorPrimaryYellow</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryYellow</item>
+    </style>
+
+    <!-- Splash Screen tema bez action bar -->
+    <style name="Theme.Pizzeria.Splash" parent="Theme.Pizzeria">
+        <item name="android:windowBackground">@color/colorPrimaryYellow</item>
+    </style>
+
+</resources>

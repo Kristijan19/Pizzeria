@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">Pizzeria</string>
+
+    <!-- Navigation -->
+    <string name="nav_menu">Menu</string>
+    <string name="nav_history">History</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Login / Register -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="create_account">Create Account</string>
+    <string name="or_sign_in_with">— or sign in with —</string>
+    <string name="continue_anonymous">Continue as Guest</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="logout">Logout</string>
+    <string name="login_cancelled">Login cancelled</string>
+    <string name="login_failed">Login failed. Please try again.</string>
+    <string name="register_failed">Registration failed. Please try again.</string>
+
+    <!-- Hints -->
+    <string name="hint_email">Email address</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm password</string>
+    <string name="hint_name">Your name</string>
+    <string name="hint_address">Delivery address</string>
+
+    <!-- Errors -->
+    <string name="error_empty_fields">Please fill in all fields.</string>
+    <string name="error_passwords_mismatch">Passwords do not match.</string>
+    <string name="error_password_short">Password must be at least 6 characters.</string>
+
+    <!-- Menu / Cart -->
+    <string name="cart">Cart</string>
+    <string name="go_to_cart">Go to Cart 🛒</string>
+    <string name="my_cart">My Cart</string>
+    <string name="your_order">Your Order:</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="order_confirmed">Order confirmed! Thank you.</string>
+    <string name="cart_empty">Your cart is empty. Add some pizzas first!</string>
+    <string name="max_quantity_reached">Maximum quantity reached (10).</string>
+    <string name="total_label">Total: MKD %.2f</string>
+
+    <!-- History -->
+    <string name="history">History</string>
+    <string name="order_history">Order History</string>
+    <string name="no_orders">No orders yet.</string>
+    <string name="order_number">Order #%d</string>
+
+    <!-- Profile -->
+    <string name="label_email">Email</string>
+    <string name="label_user_id">User ID</string>
+    <string name="label_login_type">Login method</string>
+    <string name="anonymous_user">Guest (anonymous)</string>
+    <string name="login_type_anonymous">Anonymous</string>
+
+    <!-- Firebase / Facebook (zameni so tvoite vrednosti) -->
+    <string name="default_web_client_id">298275084819-nuljnc9kl9610rqnenj4qaagbk3j5nrp.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">YOUR_FACEBOOK_APP_ID</string>
+    <string name="facebook_client_token">YOUR_FACEBOOK_CLIENT_TOKEN</string>
+    <string name="fb_login_protocol_scheme">fbYOUR_FACEBOOK_APP_ID</string>
+</resources>
