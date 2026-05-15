@@ -53,6 +53,22 @@
     <string name="order_confirmed">Order confirmed! Thank you.</string>
     <string name="order_history">Order History</string>
     <string name="order_number">Order #%d</string>
+    <string name="pizza_bbq_chicken">BBQ Chicken</string>
+    <string name="pizza_buffalo">Buffalo Chicken</string>
+    <string name="pizza_extravaganza">Extravaganza</string>
+    <string name="pizza_fajita">Chicken Fajita</string>
+    <string name="pizza_four_cheese">Four Cheese</string>
+    <string name="pizza_hawaiian">Hawaiian</string>
+    <string name="pizza_hot_spicy">Hot and Spicy</string>
+    <string name="pizza_margherita">Margherita</string>
+    <string name="pizza_meat_lovers">Meat Lovers</string>
+    <string name="pizza_mediterranean">Mediterranean</string>
+    <string name="pizza_mushroom">Mushroom</string>
+    <string name="pizza_olive">Olive and Tomato</string>
+    <string name="pizza_pepperoni">Pepperoni</string>
+    <string name="pizza_supreme">Supreme</string>
+    <string name="pizza_tandoori">Tandoori</string>
+    <string name="pizza_veggie">Veggie Delight</string>
     <string name="project_id" translatable="false">pizzeria-82b13</string>
     <string name="register">Register</string>
     <string name="register_failed">Registration failed. Please try again.</string>

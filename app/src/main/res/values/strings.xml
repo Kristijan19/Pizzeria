@@ -61,4 +61,20 @@
     <string name="facebook_app_id">YOUR_FACEBOOK_APP_ID</string>
     <string name="facebook_client_token">YOUR_FACEBOOK_CLIENT_TOKEN</string>
     <string name="fb_login_protocol_scheme">fbYOUR_FACEBOOK_APP_ID</string>
+    <string name="pizza_margherita">Margherita</string>
+    <string name="pizza_pepperoni">Pepperoni</string>
+    <string name="pizza_hawaiian">Hawaiian</string>
+    <string name="pizza_bbq_chicken">BBQ Chicken</string>
+    <string name="pizza_supreme">Supreme</string>
+    <string name="pizza_veggie">Veggie Delight</string>
+    <string name="pizza_meat_lovers">Meat Lovers</string>
+    <string name="pizza_four_cheese">Four Cheese</string>
+    <string name="pizza_buffalo">Buffalo Chicken</string>
+    <string name="pizza_mushroom">Mushroom</string>
+    <string name="pizza_mediterranean">Mediterranean</string>
+    <string name="pizza_fajita">Chicken Fajita</string>
+    <string name="pizza_olive">Olive and Tomato</string>
+    <string name="pizza_tandoori">Tandoori</string>
+    <string name="pizza_extravaganza">Extravaganza</string>
+    <string name="pizza_hot_spicy">Hot and Spicy</string>
 </resources>

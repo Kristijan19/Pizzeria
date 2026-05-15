@@ -2,15 +2,19 @@ package com.anas.pizzeria.ui.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.anas.pizzeria.R;
 import com.anas.pizzeria.ui.MainActivity;
+import com.anas.pizzeria.util.LocaleHelper;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -45,6 +49,10 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Primeni zacuvaniot jazik
+        String savedLang = LocaleHelper.getSavedLanguage(this);
+        LocaleHelper.applyLocale(this, savedLang);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -98,6 +106,32 @@ public class LoginActivity extends AppCompatActivity {
                 showToast(getString(R.string.login_failed) + ": " + error.getMessage());
             }
         });
+    }
+
+    // ============ JAZICNO KOPCE VO TOOLBAR ============
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        String currentLang = LocaleHelper.getSavedLanguage(this);
+        String label = currentLang.equals("en") ? "MK" : "EN";
+        menu.add(Menu.NONE, 1, Menu.NONE, label)
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == 1) {
+            String currentLang = LocaleHelper.getSavedLanguage(this);
+            String newLang = currentLang.equals("en") ? "mk" : "en";
+            LocaleHelper.setLocale(this, newLang);
+            // Restartaj Activity
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     // ======================== EMAIL/PASSWORD ========================
@@ -208,10 +242,8 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        // Facebook callback
         mCallbackManager.onActivityResult(requestCode, resultCode, data);
 
-        // Google callback
         if (requestCode == RC_GOOGLE_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {

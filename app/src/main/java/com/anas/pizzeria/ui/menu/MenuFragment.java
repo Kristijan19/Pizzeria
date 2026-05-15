@@ -101,22 +101,22 @@ public class MenuFragment extends Fragment {
 
     private List<Pizza> createPizzaList() {
         List<Pizza> list = new ArrayList<>();
-        list.add(new Pizza("Margherita",       700,  R.drawable.pizza_item));
-        list.add(new Pizza("Pepperoni",        1100, R.drawable.pizza_item));
-        list.add(new Pizza("Hawaiian",         1200, R.drawable.pizza_item));
-        list.add(new Pizza("BBQ Chicken",      1300, R.drawable.pizza_item));
-        list.add(new Pizza("Supreme",          1400, R.drawable.pizza_item));
-        list.add(new Pizza("Veggie Delight",   1200, R.drawable.pizza_item));
-        list.add(new Pizza("Meat Lovers",      1100, R.drawable.pizza_item));
-        list.add(new Pizza("Four Cheese",      1000, R.drawable.pizza_item));
-        list.add(new Pizza("Buffalo Chicken",  1300, R.drawable.pizza_item));
-        list.add(new Pizza("Mushroom",         1200, R.drawable.pizza_item));
-        list.add(new Pizza("Mediterranean",    1100, R.drawable.pizza_item));
-        list.add(new Pizza("Chicken Fajita",    900, R.drawable.pizza_item));
-        list.add(new Pizza("Olive & Tomato",    700, R.drawable.pizza_item));
-        list.add(new Pizza("Tandoori",         1300, R.drawable.pizza_item));
-        list.add(new Pizza("Extravaganza",     1800, R.drawable.pizza_item));
-        list.add(new Pizza("Hot & Spicy",       800, R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_margherita),    700,  R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_pepperoni),     1100, R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_hawaiian),      1200, R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_bbq_chicken),   1300, R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_supreme),       1400, R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_veggie),        1200, R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_meat_lovers),   1100, R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_four_cheese),   1000, R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_buffalo),       1300, R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_mushroom),      1200, R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_mediterranean), 1100, R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_fajita),         900, R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_olive),          700, R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_tandoori),      1300, R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_extravaganza),  1800, R.drawable.pizza_item));
+        list.add(new Pizza(getString(R.string.pizza_hot_spicy),      800, R.drawable.pizza_item));
         return list;
     }
 }
