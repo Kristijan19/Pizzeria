@@ -44,17 +44,23 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAnalytics mAnalytics;
     private GoogleSignInClient mGoogleSignInClient;
     private CallbackManager mCallbackManager;
-
     private TextInputEditText etEmail, etPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Primeni zacuvaniot jazik
+        // Primeni zacuvaniot jazik PRVO pred se drugo
         String savedLang = LocaleHelper.getSavedLanguage(this);
         LocaleHelper.applyLocale(this, savedLang);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        // Postavi Toolbar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("");
+        }
 
         mAuth = FirebaseAuth.getInstance();
         mAnalytics = FirebaseAnalytics.getInstance(this);
@@ -62,21 +68,17 @@ public class LoginActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
 
-        // ---- Email/Password Login ----
         MaterialButton btnEmailLogin = findViewById(R.id.btnEmailLogin);
         btnEmailLogin.setOnClickListener(v -> loginWithEmail());
 
-        // ---- Register Link ----
         MaterialButton btnGoRegister = findViewById(R.id.btnGoRegister);
         btnGoRegister.setOnClickListener(v -> {
             startActivity(new Intent(this, RegisterActivity.class));
         });
 
-        // ---- Anonymous Login ----
         MaterialButton btnAnonymous = findViewById(R.id.btnAnonymous);
         btnAnonymous.setOnClickListener(v -> loginAnonymously());
 
-        // ---- Google Sign-In ----
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -86,7 +88,6 @@ public class LoginActivity extends AppCompatActivity {
         SignInButton btnGoogle = findViewById(R.id.btnGoogle);
         btnGoogle.setOnClickListener(v -> signInWithGoogle());
 
-        // ---- Facebook Login ----
         mCallbackManager = CallbackManager.Factory.create();
         LoginButton btnFacebook = findViewById(R.id.btnFacebook);
         btnFacebook.setReadPermissions("email", "public_profile");
@@ -95,20 +96,16 @@ public class LoginActivity extends AppCompatActivity {
             public void onSuccess(LoginResult loginResult) {
                 handleFacebookAccessToken(loginResult.getAccessToken());
             }
-
             @Override
             public void onCancel() {
                 showToast(getString(R.string.login_cancelled));
             }
-
             @Override
             public void onError(@NonNull FacebookException error) {
                 showToast(getString(R.string.login_failed) + ": " + error.getMessage());
             }
         });
     }
-
-    // ============ JAZICNO KOPCE VO TOOLBAR ============
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -125,7 +122,6 @@ public class LoginActivity extends AppCompatActivity {
             String currentLang = LocaleHelper.getSavedLanguage(this);
             String newLang = currentLang.equals("en") ? "mk" : "en";
             LocaleHelper.setLocale(this, newLang);
-            // Restartaj Activity
             Intent intent = getIntent();
             finish();
             startActivity(intent);
@@ -134,17 +130,13 @@ public class LoginActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    // ======================== EMAIL/PASSWORD ========================
-
     private void loginWithEmail() {
         String email = etEmail.getText() != null ? etEmail.getText().toString().trim() : "";
         String password = etPassword.getText() != null ? etPassword.getText().toString().trim() : "";
-
         if (email.isEmpty() || password.isEmpty()) {
             showToast(getString(R.string.error_empty_fields));
             return;
         }
-
         showLoading(true);
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(task -> {
@@ -157,8 +149,6 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
-
-    // ======================== ANONYMOUS ========================
 
     private void loginAnonymously() {
         showLoading(true);
@@ -173,8 +163,6 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
-
-    // ======================== GOOGLE ========================
 
     private void signInWithGoogle() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
@@ -196,8 +184,6 @@ public class LoginActivity extends AppCompatActivity {
                 });
     }
 
-    // ======================== FACEBOOK ========================
-
     private void handleFacebookAccessToken(AccessToken token) {
         AuthCredential credential = FacebookAuthProvider.getCredential(token.getToken());
         showLoading(true);
@@ -212,8 +198,6 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
-
-    // ======================== HELPER METHODS ========================
 
     private void goToMain() {
         Intent intent = new Intent(this, MainActivity.class);
@@ -243,7 +227,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         mCallbackManager.onActivityResult(requestCode, resultCode, data);
-
         if (requestCode == RC_GOOGLE_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
