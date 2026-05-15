@@ -1,9 +1,13 @@
 package com.anas.pizzeria.ui;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import com.anas.pizzeria.R;
@@ -15,9 +19,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAnalytics mAnalytics;
+    private String currentLang = "en";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mAnalytics = FirebaseAnalytics.getInstance(this);
+
+        // Postavi Toolbar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         // Proveri dali korisnikot e najaven
         if (FirebaseAuth.getInstance().getCurrentUser() == null) {
@@ -59,6 +70,52 @@ public class MainActivity extends AppCompatActivity {
             return false;
         });
     }
+
+    // ============ JAZICNO KOPCE VO TOOLBAR ============
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add(Menu.NONE, 1, Menu.NONE, "MK / EN")
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == 1) {
+            // Zameni jazik
+            if (currentLang.equals("en")) {
+                setLocale("mk");
+                currentLang = "mk";
+            } else {
+                setLocale("en");
+                currentLang = "en";
+            }
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void setLocale(String langCode) {
+        Locale locale = new Locale(langCode);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.setLocale(locale);
+        getResources().updateConfiguration(config,
+                getResources().getDisplayMetrics());
+
+        // Log Analytics event
+        Bundle params = new Bundle();
+        params.putString("language", langCode);
+        mAnalytics.logEvent("language_changed", params);
+
+        // Restartaj Activity za da se primeni jazikot
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+    }
+
+    // ============ HELPER METHODS ============
 
     private void loadFragment(Fragment fragment) {
         getSupportFragmentManager()
