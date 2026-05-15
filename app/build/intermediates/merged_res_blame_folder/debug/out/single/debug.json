@@ -1,154 +1,182 @@
 [
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/layout_item_order.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/layout/item_order.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\drawable_ic_history.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\drawable\\ic_history.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.anas.pizzeria.app-main-52:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\layout_fragment_history.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\layout\\fragment_history.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/drawable_ic_history.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/drawable/ic_history.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/layout_activity_main.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/layout/activity_main.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\drawable_ic_plus.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\drawable\\ic_plus.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/layout_item_pizza.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/layout/item_pizza.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\layout-land_fragment_menu.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\layout-land\\fragment_menu.xml"
     },
     {
         "merged": "com.anas.pizzeria.app-merged_res-50:/layout_fragment_profile.xml.flat",
         "source": "com.anas.pizzeria.app-main-52:/layout/fragment_profile.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\drawable_pizza_item.png.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\drawable\\pizza_item.png"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/xml_data_extraction_rules.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.anas.pizzeria.app-main-52:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/layout_activity_cart.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/layout/activity_cart.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/layout_activity_register.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/layout/activity_register.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\drawable_ic_minus.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\drawable\\ic_minus.xml"
     },
     {
         "merged": "com.anas.pizzeria.app-merged_res-50:/layout_activity_login.xml.flat",
         "source": "com.anas.pizzeria.app-main-52:/layout/activity_login.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/drawable_ic_profile.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/drawable/ic_profile.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/layout-land_activity_cart.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/layout-land/activity_cart.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\drawable_ic_pizza.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\drawable\\ic_pizza.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/layout_fragment_history.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/layout/fragment_history.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\layout\\activity_login.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/drawable_ic_minus.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/drawable/ic_minus.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\layout\\fragment_profile.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/menu_bottom_nav_menu.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/menu/bottom_nav_menu.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/drawable_ic_pizza.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/drawable/ic_pizza.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\drawable_btn_bg.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\drawable\\btn_bg.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.anas.pizzeria.app-main-52:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\menu\\bottom_nav_menu.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.anas.pizzeria.app-main-52:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.anas.pizzeria.app-main-52:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\layout_activity_history.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\layout\\activity_history.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/xml_backup_rules.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\layout\\activity_splash.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/drawable_ic_plus.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/drawable/ic_plus.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\layout_item_order.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\layout\\item_order.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/layout_activity_splash.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/layout/activity_splash.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\drawable_list_divider.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\drawable\\list_divider.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/layout-land_fragment_menu.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/layout-land/fragment_menu.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\layout_fragment_menu.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\layout\\fragment_menu.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.anas.pizzeria.app-main-52:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\layout-sw600dp_activity_login.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\layout-sw600dp\\activity_login.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.anas.pizzeria.app-main-52:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/layout_fragment_menu.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/layout/fragment_menu.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\drawable_ic_profile.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\drawable\\ic_profile.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/layout_activity_history.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/layout/activity_history.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\color_bottom_nav_color.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\color\\bottom_nav_color.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.anas.pizzeria.app-main-52:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-hdpi_pizza.png.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\mipmap-hdpi\\pizza.png"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\layout_item_pizza.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\layout\\item_pizza.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\layout_activity_cart.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\layout\\activity_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\layout\\activity_register.xml"
     },
     {
         "merged": "com.anas.pizzeria.app-merged_res-50:/layout-sw600dp_activity_login.xml.flat",
         "source": "com.anas.pizzeria.app-main-52:/layout-sw600dp/activity_login.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/drawable_pizza_item.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/drawable/pizza_item.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.anas.pizzeria.app-main-52:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\drawable_custom_input.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\drawable\\custom_input.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/color_bottom_nav_color.xml.flat",
-        "source": "com.anas.pizzeria.app-main-52:/color/bottom_nav_color.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\layout-land_activity_cart.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\layout-land\\activity_cart.xml"
     },
     {
-        "merged": "com.anas.pizzeria.app-merged_res-50:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.anas.pizzeria.app-main-52:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\drawable\\ic_launcher_background.xml"
     }
 ]

@@ -9,6 +9,8 @@ color colorPrimaryYellow
 color colorPrimaryYellowDark
 color grey
 color white
+drawable btn_bg
+drawable custom_input
 drawable ic_history
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -16,6 +18,7 @@ drawable ic_minus
 drawable ic_pizza
 drawable ic_plus
 drawable ic_profile
+drawable list_divider
 drawable pizza_item
 id addressEditText
 id bottomNavigation
@@ -75,6 +78,7 @@ layout item_pizza
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap pizza
 string anonymous_user
 string app_name
 string back_to_login
@@ -125,6 +129,7 @@ string register
 string register_failed
 string total_label
 string your_order
+style Base.Theme.Pizzeria
 style Theme.Pizzeria
 style Theme.Pizzeria.Splash
 xml backup_rules

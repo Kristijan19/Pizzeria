@@ -2982,6 +2982,7 @@ int drawable abc_textfield_search_material 0x7f070075
 int drawable abc_vector_test 0x7f070076
 int drawable avd_hide_password 0x7f070077
 int drawable avd_show_password 0x7f070078
+int drawable btn_bg 0x7f07011a
 int drawable btn_checkbox_checked_mtrl 0x7f070079
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f07007a
 int drawable btn_checkbox_unchecked_mtrl 0x7f07007b
@@ -3032,6 +3033,7 @@ int drawable common_google_signin_btn_text_light 0x7f0700a7
 int drawable common_google_signin_btn_text_light_focused 0x7f0700a8
 int drawable common_google_signin_btn_text_light_normal 0x7f0700a9
 int drawable common_google_signin_btn_text_light_normal_background 0x7f0700aa
+int drawable custom_input 0x7f07011b
 int drawable design_fab_background 0x7f0700ab
 int drawable design_ic_visibility 0x7f0700ac
 int drawable design_ic_visibility_off 0x7f0700ad
@@ -3058,6 +3060,7 @@ int drawable ic_pizza 0x7f0700c1
 int drawable ic_plus 0x7f0700c2
 int drawable ic_profile 0x7f0700c3
 int drawable ic_search_black_24 0x7f0700c4
+int drawable list_divider 0x7f07011c
 int drawable m3_appbar_background 0x7f0700c5
 int drawable m3_avd_hide_password 0x7f0700c6
 int drawable m3_avd_show_password 0x7f0700c7
@@ -3949,6 +3952,7 @@ int layout support_simple_spinner_dropdown_item 0x7f0b0089
 int menu bottom_nav_menu 0x7f0d0000
 int mipmap ic_launcher 0x7f0e0000
 int mipmap ic_launcher_round 0x7f0e0001
+int mipmap pizza 0x7f0e0002
 int plurals mtrl_badge_content_description 0x7f0f0000
 int raw firebase_common_keep 0x7f100000
 int string abc_action_bar_home_description 0x7f110000
@@ -4320,6 +4324,7 @@ int style Base_Theme_MaterialComponents_Light_Dialog_Bridge 0x7f12006e
 int style Base_Theme_MaterialComponents_Light_Dialog_FixedSize 0x7f12006f
 int style Base_Theme_MaterialComponents_Light_Dialog_MinWidth 0x7f120070
 int style Base_Theme_MaterialComponents_Light_DialogWhenLarge 0x7f120071
+int style Base_Theme_Pizzeria 0x7f12046b
 int style Base_ThemeOverlay_AppCompat 0x7f120072
 int style Base_ThemeOverlay_AppCompat_ActionBar 0x7f120073
 int style Base_ThemeOverlay_AppCompat_Dark 0x7f120074
