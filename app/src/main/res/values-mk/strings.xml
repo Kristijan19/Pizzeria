@@ -41,9 +41,9 @@
     <string name="anonymous_user">Гостин (анонимен)</string>
     <string name="login_type_anonymous">Анонимен</string>
     <string name="default_web_client_id">298275084819-nuljnc9kl9610rqnenj4qaagbk3j5nrp.apps.googleusercontent.com</string>
-    <string name="facebook_app_id">YOUR_FACEBOOK_APP_ID</string>
+    <string name="facebook_app_id">966777822777146</string>
     <string name="facebook_client_token">YOUR_FACEBOOK_CLIENT_TOKEN</string>
-    <string name="fb_login_protocol_scheme">fbYOUR_FACEBOOK_APP_ID</string>
+    <string name="fb_login_protocol_scheme">fb966777822777146</string>
     <string name="pizza_margherita">Маргарита</string>
     <string name="pizza_pepperoni">Пеперони</string>
     <string name="pizza_hawaiian">Хавајска</string>

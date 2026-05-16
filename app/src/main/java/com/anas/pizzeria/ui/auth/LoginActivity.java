@@ -1,17 +1,17 @@
 package com.anas.pizzeria.ui.auth;
-
+ 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-
+ 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
+ 
 import com.anas.pizzeria.R;
 import com.anas.pizzeria.ui.MainActivity;
 import com.anas.pizzeria.util.LocaleHelper;
@@ -35,62 +35,65 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
-
+ 
+import java.util.Arrays;
+ 
 public class LoginActivity extends AppCompatActivity {
-
+ 
     private static final int RC_GOOGLE_SIGN_IN = 9001;
-
+ 
     private FirebaseAuth mAuth;
     private FirebaseAnalytics mAnalytics;
     private GoogleSignInClient mGoogleSignInClient;
     private CallbackManager mCallbackManager;
     private TextInputEditText etEmail, etPassword;
-
+ 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Primeni zacuvaniot jazik PRVO pred se drugo
         String savedLang = LocaleHelper.getSavedLanguage(this);
         LocaleHelper.applyLocale(this, savedLang);
-
+ 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+ 
         // Postavi Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("");
         }
-
+ 
         mAuth = FirebaseAuth.getInstance();
         mAnalytics = FirebaseAnalytics.getInstance(this);
-
+ 
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
-
+ 
         MaterialButton btnEmailLogin = findViewById(R.id.btnEmailLogin);
         btnEmailLogin.setOnClickListener(v -> loginWithEmail());
-
+ 
         MaterialButton btnGoRegister = findViewById(R.id.btnGoRegister);
         btnGoRegister.setOnClickListener(v -> {
             startActivity(new Intent(this, RegisterActivity.class));
         });
-
+ 
         MaterialButton btnAnonymous = findViewById(R.id.btnAnonymous);
         btnAnonymous.setOnClickListener(v -> loginAnonymously());
-
+ 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
+ 
         SignInButton btnGoogle = findViewById(R.id.btnGoogle);
         btnGoogle.setOnClickListener(v -> signInWithGoogle());
-
+ 
         mCallbackManager = CallbackManager.Factory.create();
         LoginButton btnFacebook = findViewById(R.id.btnFacebook);
-        btnFacebook.setReadPermissions("email", "public_profile");
+        // Samo public_profile - bez email permission
+        btnFacebook.setPermissions(Arrays.asList("public_profile"));
         btnFacebook.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -106,7 +109,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
+ 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         String currentLang = LocaleHelper.getSavedLanguage(this);
@@ -115,7 +118,7 @@ public class LoginActivity extends AppCompatActivity {
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
         return true;
     }
-
+ 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == 1) {
@@ -129,7 +132,7 @@ public class LoginActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
+ 
     private void loginWithEmail() {
         String email = etEmail.getText() != null ? etEmail.getText().toString().trim() : "";
         String password = etPassword.getText() != null ? etPassword.getText().toString().trim() : "";
@@ -149,7 +152,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
-
+ 
     private void loginAnonymously() {
         showLoading(true);
         mAuth.signInAnonymously()
@@ -163,12 +166,12 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
-
+ 
     private void signInWithGoogle() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_GOOGLE_SIGN_IN);
     }
-
+ 
     private void firebaseAuthWithGoogle(String idToken) {
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
         showLoading(true);
@@ -183,7 +186,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
-
+ 
     private void handleFacebookAccessToken(AccessToken token) {
         AuthCredential credential = FacebookAuthProvider.getCredential(token.getToken());
         showLoading(true);
@@ -198,31 +201,31 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
-
+ 
     private void goToMain() {
         Intent intent = new Intent(this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
     }
-
+ 
     private void logAnalyticsEvent(String method) {
         Bundle bundle = new Bundle();
         bundle.putString(FirebaseAnalytics.Param.METHOD, method);
         mAnalytics.logEvent(FirebaseAnalytics.Event.LOGIN, bundle);
     }
-
+ 
     private void showLoading(boolean show) {
         View progressBar = findViewById(R.id.progressBar);
         if (progressBar != null) {
             progressBar.setVisibility(show ? View.VISIBLE : View.GONE);
         }
     }
-
+ 
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
-
+ 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

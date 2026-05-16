@@ -1,10 +1,13 @@
-
 package com.anas.pizzeria.ui;
  
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Base64;
 import android.util.Log;
  
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,10 +19,13 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.messaging.FirebaseMessaging;
  
+import java.security.MessageDigest;
+ 
 public class SplashActivity extends AppCompatActivity {
  
     private static final int SPLASH_DELAY = 2500;
     private static final String TAG = "FCM_TOKEN";
+    private static final String KEY_TAG = "KeyHash";
  
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +46,21 @@ public class SplashActivity extends AppCompatActivity {
                         Log.w(TAG, "Fetching FCM token failed", task.getException());
                     }
                 });
+ 
+        // Key Hash za Facebook Login
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo(
+                    "com.anas.pizzeria",
+                    PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                String keyHash = Base64.encodeToString(md.digest(), Base64.DEFAULT);
+                Log.d(KEY_TAG, "KeyHash: " + keyHash);
+            }
+        } catch (Exception e) {
+            Log.d(KEY_TAG, "Error: " + e.getMessage());
+        }
  
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();

@@ -20,9 +20,9 @@
     <string name="error_empty_fields">Please fill in all fields.</string>
     <string name="error_password_short">Password must be at least 6 characters.</string>
     <string name="error_passwords_mismatch">Passwords do not match.</string>
-    <string name="facebook_app_id">YOUR_FACEBOOK_APP_ID</string>
-    <string name="facebook_client_token">YOUR_FACEBOOK_CLIENT_TOKEN</string>
-    <string name="fb_login_protocol_scheme">fbYOUR_FACEBOOK_APP_ID</string>
+    <string name="facebook_app_id">966777822777146</string>
+    <string name="facebook_client_token">925b32f4f6a143a3e0d5d1d7b105aaf3</string>
+    <string name="fb_login_protocol_scheme">fb966777822777146</string>
     <string name="gcm_defaultSenderId" translatable="false">298275084819</string>
     <string name="go_to_cart">Go to Cart 🛒</string>
     <string name="google_api_key" translatable="false">AIzaSyDhZtkZNz0OoYUbiSjxMkcG7LlUgmqd61Y</string>

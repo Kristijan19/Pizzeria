@@ -12,9 +12,9 @@
     <string name="error_empty_fields">Ве молиме пополнете ги сите полиња.</string>
     <string name="error_password_short">Лозинката мора да има барем 6 знаци.</string>
     <string name="error_passwords_mismatch">Лозинките не се совпаѓаат.</string>
-    <string name="facebook_app_id">YOUR_FACEBOOK_APP_ID</string>
+    <string name="facebook_app_id">966777822777146</string>
     <string name="facebook_client_token">YOUR_FACEBOOK_CLIENT_TOKEN</string>
-    <string name="fb_login_protocol_scheme">fbYOUR_FACEBOOK_APP_ID</string>
+    <string name="fb_login_protocol_scheme">fb966777822777146</string>
     <string name="go_to_cart">Кон кошницата 🛒</string>
     <string name="hint_address">Адреса за достава</string>
     <string name="hint_confirm_password">Потврди лозинка</string>
