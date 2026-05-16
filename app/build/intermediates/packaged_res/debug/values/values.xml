@@ -50,8 +50,11 @@
     <string name="nav_profile">Profile</string>
     <string name="no_orders">No orders yet.</string>
     <string name="or_sign_in_with">— or sign in with —</string>
+    <string name="order_address">Address: %s</string>
     <string name="order_confirmed">Order confirmed! Thank you.</string>
+    <string name="order_date">Date: %s</string>
     <string name="order_history">Order History</string>
+    <string name="order_items">Items: %s</string>
     <string name="order_number">Order #%d</string>
     <string name="pizza_bbq_chicken">BBQ Chicken</string>
     <string name="pizza_buffalo">Buffalo Chicken</string>
@@ -72,6 +75,10 @@
     <string name="project_id" translatable="false">pizzeria-82b13</string>
     <string name="register">Register</string>
     <string name="register_failed">Registration failed. Please try again.</string>
+    <string name="toolbar_cart">My Cart</string>
+    <string name="toolbar_history">Order History</string>
+    <string name="toolbar_menu">Pizza Menu</string>
+    <string name="toolbar_profile">Profile</string>
     <string name="total_label">Total: MKD %.2f</string>
     <string name="your_order">Your Order:</string>
     <style name="Theme.Pizzeria" parent="Theme.MaterialComponents.Light.NoActionBar">

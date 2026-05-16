@@ -13,7 +13,7 @@
     <string name="error_password_short">Лозинката мора да има барем 6 знаци.</string>
     <string name="error_passwords_mismatch">Лозинките не се совпаѓаат.</string>
     <string name="facebook_app_id">966777822777146</string>
-    <string name="facebook_client_token">YOUR_FACEBOOK_CLIENT_TOKEN</string>
+    <string name="facebook_client_token">925b32f4f6a143a3e0d5d1d7b105aaf3</string>
     <string name="fb_login_protocol_scheme">fb966777822777146</string>
     <string name="go_to_cart">Кон кошницата 🛒</string>
     <string name="hint_address">Адреса за достава</string>
@@ -37,8 +37,11 @@
     <string name="nav_profile">Профил</string>
     <string name="no_orders">Сè уште нема нарачки.</string>
     <string name="or_sign_in_with">— или најави се со —</string>
+    <string name="order_address">Адреса: %s</string>
     <string name="order_confirmed">Нарачката е потврдена! Благодариме.</string>
+    <string name="order_date">Датум: %s</string>
     <string name="order_history">Историја на нарачки</string>
+    <string name="order_items">Ставки: %s</string>
     <string name="order_number">Нарачка #%d</string>
     <string name="pizza_bbq_chicken">ББК Пилешко</string>
     <string name="pizza_buffalo">Бифало Пилешко</string>
@@ -58,6 +61,10 @@
     <string name="pizza_veggie">Зеленчук</string>
     <string name="register">Регистрирај се</string>
     <string name="register_failed">Регистрацијата не успеа. Обиди се повторно.</string>
+    <string name="toolbar_cart">Моја кошница</string>
+    <string name="toolbar_history">Историја на нарачки</string>
+    <string name="toolbar_menu">Мени со пици</string>
+    <string name="toolbar_profile">Профил</string>
     <string name="total_label">Вкупно: МКД %.2f</string>
     <string name="your_order">Твојата нарачка:</string>
 </resources>

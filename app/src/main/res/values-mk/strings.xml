@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- App -->
     <string name="app_name">Пицерија</string>
+
+    <!-- Navigation -->
     <string name="nav_menu">Мени</string>
     <string name="nav_history">Историја</string>
     <string name="nav_profile">Профил</string>
+
+    <!-- Login / Register -->
     <string name="login">Најави се</string>
     <string name="register">Регистрирај се</string>
     <string name="create_account">Создади сметка</string>
@@ -14,14 +19,20 @@
     <string name="login_cancelled">Најавата е откажана</string>
     <string name="login_failed">Најавата не успеа. Обиди се повторно.</string>
     <string name="register_failed">Регистрацијата не успеа. Обиди се повторно.</string>
+
+    <!-- Hints -->
     <string name="hint_email">Е-маил адреса</string>
     <string name="hint_password">Лозинка</string>
     <string name="hint_confirm_password">Потврди лозинка</string>
     <string name="hint_name">Твоето име</string>
     <string name="hint_address">Адреса за достава</string>
+
+    <!-- Errors -->
     <string name="error_empty_fields">Ве молиме пополнете ги сите полиња.</string>
     <string name="error_passwords_mismatch">Лозинките не се совпаѓаат.</string>
     <string name="error_password_short">Лозинката мора да има барем 6 знаци.</string>
+
+    <!-- Menu / Cart -->
     <string name="cart">Кошница</string>
     <string name="go_to_cart">Кон кошницата 🛒</string>
     <string name="my_cart">Моја кошница</string>
@@ -31,19 +42,36 @@
     <string name="cart_empty">Кошницата е празна. Додади пици прво!</string>
     <string name="max_quantity_reached">Максималната количина е достигната (10).</string>
     <string name="total_label">Вкупно: МКД %.2f</string>
+
+    <!-- History -->
     <string name="history">Историја</string>
     <string name="order_history">Историја на нарачки</string>
     <string name="no_orders">Сè уште нема нарачки.</string>
     <string name="order_number">Нарачка #%d</string>
+
+    <!-- Profile -->
     <string name="label_email">Е-маил</string>
     <string name="label_user_id">Корисничко ID</string>
     <string name="label_login_type">Начин на најава</string>
     <string name="anonymous_user">Гостин (анонимен)</string>
     <string name="login_type_anonymous">Анонимен</string>
+
+    <!-- Toolbar -->
+    <string name="toolbar_cart">Моја кошница</string>
+    <string name="toolbar_history">Историја на нарачки</string>
+    <string name="toolbar_profile">Профил</string>
+    <string name="toolbar_menu">Мени со пици</string>
+    <string name="order_date">Датум: %s</string>
+    <string name="order_address">Адреса: %s</string>
+    <string name="order_items">Ставки: %s</string>
+
+    <!-- Firebase / Facebook -->
     <string name="default_web_client_id">298275084819-nuljnc9kl9610rqnenj4qaagbk3j5nrp.apps.googleusercontent.com</string>
     <string name="facebook_app_id">966777822777146</string>
-    <string name="facebook_client_token">YOUR_FACEBOOK_CLIENT_TOKEN</string>
+    <string name="facebook_client_token">925b32f4f6a143a3e0d5d1d7b105aaf3</string>
     <string name="fb_login_protocol_scheme">fb966777822777146</string>
+
+    <!-- Pizza Names -->
     <string name="pizza_margherita">Маргарита</string>
     <string name="pizza_pepperoni">Пеперони</string>
     <string name="pizza_hawaiian">Хавајска</string>

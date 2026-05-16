@@ -121,8 +121,11 @@ string nav_menu
 string nav_profile
 string no_orders
 string or_sign_in_with
+string order_address
 string order_confirmed
+string order_date
 string order_history
+string order_items
 string order_number
 string pizza_bbq_chicken
 string pizza_buffalo
@@ -143,6 +146,10 @@ string pizza_veggie
 string project_id
 string register
 string register_failed
+string toolbar_cart
+string toolbar_history
+string toolbar_menu
+string toolbar_profile
 string total_label
 string your_order
 style Base.Theme.Pizzeria

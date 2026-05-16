@@ -4190,8 +4190,11 @@ int string nav_menu 0x7f1100e7
 int string nav_profile 0x7f1100e8
 int string no_orders 0x7f1100e9
 int string or_sign_in_with 0x7f1100ea
+int string order_address 0x7f11010f
 int string order_confirmed 0x7f1100eb
+int string order_date 0x7f110110
 int string order_history 0x7f1100ec
+int string order_items 0x7f110111
 int string order_number 0x7f1100ed
 int string password_toggle_content_description 0x7f1100ee
 int string path_password_eye 0x7f1100ef
@@ -4224,6 +4227,10 @@ int string searchview_navigation_content_description 0x7f110109
 int string side_sheet_accessibility_pane_title 0x7f11010a
 int string side_sheet_behavior 0x7f11010b
 int string status_bar_notification_info_overflow 0x7f11010c
+int string toolbar_cart 0x7f110112
+int string toolbar_history 0x7f110113
+int string toolbar_menu 0x7f110114
+int string toolbar_profile 0x7f110115
 int string total_label 0x7f11010d
 int string your_order 0x7f11010e
 int style AlertDialog_AppCompat 0x7f120000

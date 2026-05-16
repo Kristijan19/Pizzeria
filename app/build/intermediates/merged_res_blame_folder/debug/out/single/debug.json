@@ -12,12 +12,12 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\drawable_ic_plus.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\drawable\\ic_plus.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-main-52:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\8.6\\com.anas.pizzeria.app-merged_res-50:\\mipmap-mdpi_ic_launcher_round.webp.flat",

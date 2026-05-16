@@ -56,11 +56,22 @@
     <string name="anonymous_user">Guest (anonymous)</string>
     <string name="login_type_anonymous">Anonymous</string>
 
-    <!-- Firebase / Facebook (zameni so tvoite vrednosti) -->
+    <!-- Toolbar -->
+    <string name="toolbar_cart">My Cart</string>
+    <string name="toolbar_history">Order History</string>
+    <string name="toolbar_profile">Profile</string>
+    <string name="toolbar_menu">Pizza Menu</string>
+    <string name="order_date">Date: %s</string>
+    <string name="order_address">Address: %s</string>
+    <string name="order_items">Items: %s</string>
+
+    <!-- Firebase / Facebook -->
     <string name="default_web_client_id">298275084819-nuljnc9kl9610rqnenj4qaagbk3j5nrp.apps.googleusercontent.com</string>
     <string name="facebook_app_id">966777822777146</string>
     <string name="facebook_client_token">925b32f4f6a143a3e0d5d1d7b105aaf3</string>
     <string name="fb_login_protocol_scheme">fb966777822777146</string>
+
+    <!-- Pizza Names -->
     <string name="pizza_margherita">Margherita</string>
     <string name="pizza_pepperoni">Pepperoni</string>
     <string name="pizza_hawaiian">Hawaiian</string>

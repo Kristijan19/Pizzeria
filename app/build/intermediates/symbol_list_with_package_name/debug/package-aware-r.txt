@@ -4191,8 +4191,11 @@ string nav_menu
 string nav_profile
 string no_orders
 string or_sign_in_with
+string order_address
 string order_confirmed
+string order_date
 string order_history
+string order_items
 string order_number
 string password_toggle_content_description
 string path_password_eye
@@ -4225,6 +4228,10 @@ string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string toolbar_cart
+string toolbar_history
+string toolbar_menu
+string toolbar_profile
 string total_label
 string your_order
 style AlertDialog_AppCompat
