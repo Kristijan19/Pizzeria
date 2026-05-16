@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Orders - samo avtenticirani korisnici mozat da citaat i pisat
+    match /orders/{orderId} {
+      allow read, write: if request.auth != null;
+    }
+
+    // Zabrani pristap do site drugi kolekcii
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
