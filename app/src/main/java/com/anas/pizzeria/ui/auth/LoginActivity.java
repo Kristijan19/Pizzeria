@@ -19,6 +19,7 @@ import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -57,6 +58,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
  
+        // Iscistvanje na Facebook sesija pri sekoe otvoranje
+        LoginManager.getInstance().logOut();
+ 
         // Postavi Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -92,7 +96,6 @@ public class LoginActivity extends AppCompatActivity {
  
         mCallbackManager = CallbackManager.Factory.create();
         LoginButton btnFacebook = findViewById(R.id.btnFacebook);
-        // Samo public_profile - bez email permission
         btnFacebook.setPermissions(Arrays.asList("public_profile"));
         btnFacebook.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
             @Override

@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
  
 import com.anas.pizzeria.R;
 import com.anas.pizzeria.ui.auth.LoginActivity;
+import com.facebook.AccessToken;
 import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -49,7 +50,6 @@ public class ProfileFragment extends Fragment {
             if (user.isAnonymous()) {
                 tvType.setText(getString(R.string.login_type_anonymous));
             } else {
-                // Proveri koj provajder go koristi korisnikot
                 boolean isFacebook = false;
                 boolean isGoogle = false;
                 for (com.google.firebase.auth.UserInfo info : user.getProviderData()) {
@@ -69,8 +69,9 @@ public class ProfileFragment extends Fragment {
  
         Button btnLogout = view.findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(v -> {
-            // Facebook Sign-Out
+            // Facebook - celosen logout so brisenje na AccessToken
             LoginManager.getInstance().logOut();
+            AccessToken.setCurrentAccessToken(null);
  
             // Firebase Sign-Out
             FirebaseAuth.getInstance().signOut();
