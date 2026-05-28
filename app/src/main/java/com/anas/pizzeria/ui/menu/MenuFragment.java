@@ -16,16 +16,23 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.anas.pizzeria.R;
+import com.anas.pizzeria.data.MenuRepository;
 import com.anas.pizzeria.model.Pizza;
+import com.anas.pizzeria.model.PizzaMenuCatalog;
 import com.anas.pizzeria.ui.cart.CartActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class MenuFragment extends Fragment {
 
     private List<Pizza> pizzaList;
     private PizzaAdapter pizzaAdapter;
+    private MenuRepository menuRepository;
+    private RecyclerView recyclerView;
+    private boolean isTablet;
+    private PizzaAdapter.PizzaClickListener clickListener;
 
     @Nullable
     @Override
@@ -39,19 +46,18 @@ public class MenuFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        pizzaList = createPizzaList();
+        menuRepository = new MenuRepository();
+        pizzaList = new ArrayList<>();
+        isTablet = getResources().getBoolean(R.bool.is_tablet);
 
-        RecyclerView recyclerView = view.findViewById(R.id.pizzaRecyclerView);
-
-        // Tablet: Grid so 2 koloni, Telefon: Linearen
-        boolean isTablet = getResources().getBoolean(R.bool.is_tablet);
+        recyclerView = view.findViewById(R.id.pizzaRecyclerView);
         if (isTablet) {
             recyclerView.setLayoutManager(new GridLayoutManager(requireContext(), 2));
         } else {
             recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         }
 
-        pizzaAdapter = new PizzaAdapter(pizzaList, new PizzaAdapter.PizzaClickListener() {
+        clickListener = new PizzaAdapter.PizzaClickListener() {
             @Override
             public void onPlusClick(int position) {
                 Pizza pizza = pizzaList.get(position);
@@ -72,12 +78,60 @@ public class MenuFragment extends Fragment {
                     pizzaAdapter.notifyItemChanged(position);
                 }
             }
-        });
+        };
 
+        pizzaAdapter = new PizzaAdapter(pizzaList, clickListener);
         recyclerView.setAdapter(pizzaAdapter);
 
         Button btnCart = view.findViewById(R.id.btnCart);
         btnCart.setOnClickListener(v -> openCart());
+
+        loadMenuPrices();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        loadMenuPrices();
+    }
+
+    private void loadMenuPrices() {
+        menuRepository.loadPrices(new MenuRepository.PricesCallback() {
+            @Override
+            public void onSuccess(Map<String, Double> prices) {
+                if (!isAdded()) return;
+                applyPrices(prices);
+            }
+
+            @Override
+            public void onError(Exception e) {
+                if (!isAdded()) return;
+                applyPrices(PizzaMenuCatalog.getDefaultPrices());
+            }
+        });
+    }
+
+    private void applyPrices(Map<String, Double> prices) {
+        Map<String, Integer> quantities = new java.util.HashMap<>();
+        for (Pizza p : pizzaList) {
+            quantities.put(p.getName(), p.getQuantity());
+        }
+
+        pizzaList.clear();
+        for (PizzaMenuCatalog.Entry entry : PizzaMenuCatalog.getEntries()) {
+            double price = prices.containsKey(entry.id) ? prices.get(entry.id) : entry.defaultPrice;
+            String name = getString(entry.nameResId);
+            Pizza pizza = new Pizza(name, price, entry.imageResId);
+            Integer qty = quantities.get(name);
+            if (qty != null && qty > 0) {
+                pizza.setQuantity(qty);
+            }
+            pizzaList.add(pizza);
+        }
+
+        if (pizzaAdapter != null) {
+            pizzaAdapter.notifyDataSetChanged();
+        }
     }
 
     private void openCart() {
@@ -97,26 +151,5 @@ public class MenuFragment extends Fragment {
         intent.putParcelableArrayListExtra("selectedPizzas", selected);
         intent.putExtra("total", total);
         startActivity(intent);
-    }
-
-    private List<Pizza> createPizzaList() {
-        List<Pizza> list = new ArrayList<>();
-        list.add(new Pizza(getString(R.string.pizza_margherita),    700,  R.drawable.pizza_item));
-        list.add(new Pizza(getString(R.string.pizza_pepperoni),     1100, R.drawable.pizza_item));
-        list.add(new Pizza(getString(R.string.pizza_hawaiian),      1200, R.drawable.pizza_item));
-        list.add(new Pizza(getString(R.string.pizza_bbq_chicken),   1300, R.drawable.pizza_item));
-        list.add(new Pizza(getString(R.string.pizza_supreme),       1400, R.drawable.pizza_item));
-        list.add(new Pizza(getString(R.string.pizza_veggie),        1200, R.drawable.pizza_item));
-        list.add(new Pizza(getString(R.string.pizza_meat_lovers),   1100, R.drawable.pizza_item));
-        list.add(new Pizza(getString(R.string.pizza_four_cheese),   1000, R.drawable.pizza_item));
-        list.add(new Pizza(getString(R.string.pizza_buffalo),       1300, R.drawable.pizza_item));
-        list.add(new Pizza(getString(R.string.pizza_mushroom),      1200, R.drawable.pizza_item));
-        list.add(new Pizza(getString(R.string.pizza_mediterranean), 1100, R.drawable.pizza_item));
-        list.add(new Pizza(getString(R.string.pizza_fajita),         900, R.drawable.pizza_item));
-        list.add(new Pizza(getString(R.string.pizza_olive),          700, R.drawable.pizza_item));
-        list.add(new Pizza(getString(R.string.pizza_tandoori),      1300, R.drawable.pizza_item));
-        list.add(new Pizza(getString(R.string.pizza_extravaganza),  1800, R.drawable.pizza_item));
-        list.add(new Pizza(getString(R.string.pizza_hot_spicy),      800, R.drawable.pizza_item));
-        return list;
     }
 }

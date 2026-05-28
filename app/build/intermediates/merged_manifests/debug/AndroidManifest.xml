@@ -44,7 +44,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.Pizzeria" >
 
-        <!-- Facebook App ID (zameni so tvojot) -->
+        <!-- Facebook App ID -->
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -88,6 +88,11 @@
         <!-- History Activity -->
         <activity
             android:name="com.anas.pizzeria.ui.history.HistoryActivity"
+            android:exported="false" />
+
+        <!-- Admin Activity -->
+        <activity
+            android:name="com.anas.pizzeria.ui.admin.AdminActivity"
             android:exported="false" />
 
         <!-- Facebook Activity -->

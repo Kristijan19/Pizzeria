@@ -11,8 +11,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
  
 import com.anas.pizzeria.R;
+import com.anas.pizzeria.data.local.entity.OrderEntity;
 import com.anas.pizzeria.model.Pizza;
 import com.anas.pizzeria.util.LocaleHelper;
+import com.anas.pizzeria.util.OrderEmailNotifier;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -29,6 +31,7 @@ public class CartActivity extends AppCompatActivity {
  
     private EditText etName, etAddress;
     private CartViewModel viewModel;
+    private String pendingUserEmail;
  
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +85,14 @@ public class CartActivity extends AppCompatActivity {
         viewModel.getOrderSaved().observe(this, saved -> {
             if (saved != null && saved) {
                 Toast.makeText(this, getString(R.string.order_confirmed), Toast.LENGTH_SHORT).show();
+                if (pendingUserEmail != null && !pendingUserEmail.trim().isEmpty()) {
+                    OrderEntity order = viewModel.getLastSavedOrder();
+                    if (order != null) {
+                        OrderEmailNotifier.sendOrderConfirmation(this, order, pendingUserEmail);
+                    }
+                } else {
+                    Toast.makeText(this, R.string.email_no_user_email, Toast.LENGTH_LONG).show();
+                }
                 finish();
             }
         });
@@ -104,7 +115,9 @@ public class CartActivity extends AppCompatActivity {
  
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userId = user != null ? user.getUid() : "anonymous";
- 
+        String userEmail = user != null ? user.getEmail() : null;
+        pendingUserEmail = userEmail;
+
         String dateTime = new SimpleDateFormat("dd/MM/yyyy HH:mm",
                 Locale.getDefault()).format(new Date());
  
@@ -116,7 +129,7 @@ public class CartActivity extends AppCompatActivity {
         analyticsBundle.putString(FirebaseAnalytics.Param.CURRENCY, "MKD");
         FirebaseAnalytics.getInstance(this).logEvent(FirebaseAnalytics.Event.PURCHASE, analyticsBundle);
  
-        viewModel.saveOrder(name, address, total, pizzaJson, dateTime, userId);
+        viewModel.saveOrder(name, address, total, pizzaJson, dateTime, userId, userEmail);
     }
  
     private String pizzasToJson(ArrayList<Pizza> pizzas) {

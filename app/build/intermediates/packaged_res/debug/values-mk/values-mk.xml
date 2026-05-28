@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="admin_access_denied">Пристапот е одбиен. Само за админи.</string>
+    <string name="admin_mark_status_template">Означи како %1$s</string>
+    <string name="admin_next_status">Следен статус</string>
+    <string name="admin_orders_load_failed">Неуспешно вчитување на нарачки.</string>
+    <string name="admin_panel">Админ панел</string>
+    <string name="admin_price_hint">МКД</string>
+    <string name="admin_prices_save_failed">Неуспешно зачувување на цени.</string>
+    <string name="admin_prices_saved">Цените се зачувани.</string>
+    <string name="admin_save_prices">Зачувај цени</string>
+    <string name="admin_status_delivered">Доставена</string>
+    <string name="admin_status_final">Финален статус</string>
+    <string name="admin_status_on_the_way">На пат</string>
+    <string name="admin_status_preparing">Во подготовка</string>
+    <string name="admin_status_received">Примена</string>
+    <string name="admin_status_update_failed">Неуспешно ажурирање на статус.</string>
+    <string name="admin_status_updated">Статусот е ажуриран.</string>
+    <string name="admin_tab_orders">Нарачки</string>
+    <string name="admin_tab_prices">Цени на пици</string>
     <string name="anonymous_user">Гостин (анонимен)</string>
     <string name="app_name">Пицерија</string>
     <string name="back_to_login">Назад кон најава</string>
@@ -9,6 +27,22 @@
     <string name="continue_anonymous">Продолжи без сметка</string>
     <string name="create_account">Создади сметка</string>
     <string name="default_web_client_id">298275084819-nuljnc9kl9610rqnenj4qaagbk3j5nrp.apps.googleusercontent.com</string>
+    <string name="email_body_order_received">Здраво %1$s,\n\nНарачката е примена. Ќе ви биде доставена за околу 1 час.\n\nДатум: %2$s\nАдреса: %3$s\nВкупно: МКД %4$.2f\n\nВи благодариме!</string>
+    <string name="email_body_status_delivered">Здраво %1$s,\n\nВашата нарачка е доставена. Пријатно!</string>
+    <string name="email_body_status_on_the_way">Здраво %1$s,\n\nВашата нарачка е на пат кон вас.</string>
+    <string name="email_body_status_preparing">Здраво %1$s,\n\nВашата нарачка моментално се подготвува.</string>
+    <string name="email_no_user_email">Сметката нема email. Најави се со email/лозинка или Google со email.</string>
+    <string name="email_sent_failed">Mail не е испратен: %1$s</string>
+    <string name="email_sent_ok">Потврдниот mail е испратен.</string>
+    <string name="email_subject_order_received">Пицерија - Нарачката е примена</string>
+    <string name="email_subject_status_delivered">Пицерија - Нарачката е доставена</string>
+    <string name="email_subject_status_on_the_way">Пицерија - Нарачката е на пат</string>
+    <string name="email_subject_status_preparing">Пицерија - Нарачката се подготвува</string>
+    <string name="emailjs_private_key"/>
+    <string name="emailjs_public_key">UQMpEKfqVwsiD22XZ</string>
+    <string name="emailjs_service_id">service_jhp8zvb</string>
+    <string name="emailjs_template_order">template_11zzkxh</string>
+    <string name="emailjs_template_status">template_ku99bs9</string>
     <string name="error_empty_fields">Ве молиме пополнете ги сите полиња.</string>
     <string name="error_password_short">Лозинката мора да има барем 6 знаци.</string>
     <string name="error_passwords_mismatch">Лозинките не се совпаѓаат.</string>
@@ -29,6 +63,9 @@
     <string name="login_cancelled">Најавата е откажана</string>
     <string name="login_failed">Најавата не успеа. Обиди се повторно.</string>
     <string name="login_type_anonymous">Анонимен</string>
+    <string name="login_type_email_password">Е-маил/Лозинка</string>
+    <string name="login_type_facebook">Facebook</string>
+    <string name="login_type_google">Google</string>
     <string name="logout">Одјави се</string>
     <string name="max_quantity_reached">Максималната количина е достигната (10).</string>
     <string name="my_cart">Моја кошница</string>

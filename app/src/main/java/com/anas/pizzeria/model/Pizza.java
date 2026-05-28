@@ -6,7 +6,7 @@ import android.os.Parcelable;
 public class Pizza implements Parcelable {
 
     private final String name;
-    private final double price;
+    private double price;
     private int quantity;
     private final int imageResId;
 
@@ -38,6 +38,8 @@ public class Pizza implements Parcelable {
     public int getImageResId() { return imageResId; }
 
     public void setQuantity(int quantity) { this.quantity = quantity; }
+
+    public void setPrice(double price) { this.price = price; }
 
     public String getFormattedPrice() {
         return String.format("MKD %.0f", price);

@@ -71,6 +71,16 @@
             android:layout_marginBottom="32dp"/>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/colorPrimaryYellow"
+            android:text="@string/admin_panel"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLogout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

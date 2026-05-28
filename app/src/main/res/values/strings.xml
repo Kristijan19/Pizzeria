@@ -55,6 +55,46 @@
     <string name="label_login_type">Login method</string>
     <string name="anonymous_user">Guest (anonymous)</string>
     <string name="login_type_anonymous">Anonymous</string>
+    <string name="login_type_google">Google</string>
+    <string name="login_type_facebook">Facebook</string>
+    <string name="login_type_email_password">Email/Password</string>
+    <string name="admin_panel">Admin Panel</string>
+    <string name="admin_access_denied">Access denied. Admins only.</string>
+    <string name="admin_next_status">Next status</string>
+    <string name="admin_mark_status_template">Mark as %1$s</string>
+    <string name="admin_status_received">Received</string>
+    <string name="admin_status_preparing">Preparing</string>
+    <string name="admin_status_on_the_way">On the way</string>
+    <string name="admin_status_delivered">Delivered</string>
+    <string name="admin_status_final">Final status</string>
+    <string name="admin_status_updated">Order status updated.</string>
+    <string name="admin_status_update_failed">Failed to update status.</string>
+    <string name="admin_tab_orders">Orders</string>
+    <string name="admin_tab_prices">Pizza prices</string>
+    <string name="admin_price_hint">MKD</string>
+    <string name="admin_save_prices">Save prices</string>
+    <string name="admin_prices_saved">Prices saved successfully.</string>
+    <string name="admin_prices_save_failed">Failed to save prices.</string>
+    <string name="admin_orders_load_failed">Failed to load orders.</string>
+
+    <!-- EmailJS (replace YOUR_* with real values from emailjs.com) -->
+    <string name="emailjs_service_id">service_jhp8zvb</string>
+    <string name="emailjs_public_key">UQMpEKfqVwsiD22XZ</string>
+    <string name="emailjs_template_order">template_11zzkxh</string>
+    <string name="emailjs_template_status">template_ku99bs9</string>
+    <string name="emailjs_private_key"></string>
+    <string name="email_sent_ok">Confirmation email sent.</string>
+    <string name="email_sent_failed">Email failed: %1$s</string>
+    <string name="email_no_user_email">No email on this account. Log in with email/password or Google with email.</string>
+
+    <string name="email_subject_order_received">Pizzeria - Order received</string>
+    <string name="email_body_order_received">Hello %1$s,\n\nYour order has been received. It will be delivered in about 1 hour.\n\nDate: %2$s\nAddress: %3$s\nTotal: MKD %4$.2f\n\nThank you!</string>
+    <string name="email_subject_status_preparing">Pizzeria - Order is being prepared</string>
+    <string name="email_body_status_preparing">Hello %1$s,\n\nYour order is now being prepared.</string>
+    <string name="email_subject_status_on_the_way">Pizzeria - Order is on the way</string>
+    <string name="email_body_status_on_the_way">Hello %1$s,\n\nYour order is on the way and will arrive soon.</string>
+    <string name="email_subject_status_delivered">Pizzeria - Order delivered</string>
+    <string name="email_body_status_delivered">Hello %1$s,\n\nYour order has been delivered. Enjoy your meal!</string>
 
     <!-- Toolbar -->
     <string name="toolbar_cart">My Cart</string>

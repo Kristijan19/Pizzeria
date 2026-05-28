@@ -13,6 +13,7 @@ public class CartViewModel extends AndroidViewModel {
 
     private final OrderRepository repository;
     private final MutableLiveData<Boolean> orderSaved = new MutableLiveData<>();
+    private OrderEntity lastSavedOrder;
 
     public CartViewModel(@NonNull Application application) {
         super(application);
@@ -23,10 +24,16 @@ public class CartViewModel extends AndroidViewModel {
         return orderSaved;
     }
 
+    public OrderEntity getLastSavedOrder() {
+        return lastSavedOrder;
+    }
+
     public void saveOrder(String name, String address, double total,
-                          String pizzaJson, String dateTime, String userId) {
+                          String pizzaJson, String dateTime, String userId, String userEmail) {
         OrderEntity order = new OrderEntity(name, address, total, pizzaJson, dateTime, userId);
-        repository.insertOrder(order, id -> {
+        repository.insertOrder(order, userEmail, id -> {
+            order.setOrderId(id);
+            lastSavedOrder = order;
             orderSaved.postValue(true);
         });
     }
